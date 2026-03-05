@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Curriculums - Aavya | Palantir Foundry Training</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/curriculums.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html"><img src="logo-aavya.png" alt="Aavya" class="logo-img"></a>
+                </div>
+                <div class="nav-links">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link">Training <span class="dropdown-arrow">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="curriculums.html" class="dropdown-item">
+                                <strong>Curriculums</strong>
+                                <span class="dropdown-desc">Role-based certification paths</span>
+                            </a>
+                            <a href="certifications.html" class="dropdown-item">
+                                <strong>Certifications</strong>
+                                <span class="dropdown-desc">Professional credentials</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link">Services <span class="dropdown-arrow">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="index.html#services" class="dropdown-item">
+                                <strong>Consultancy</strong>
+                                <span class="dropdown-desc">Strategic guidance and implementation</span>
+                            </a>
+                            <a href="index.html#services" class="dropdown-item">
+                                <strong>Staff Augmentation</strong>
+                                <span class="dropdown-desc">Expert talent solutions</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="use-cases.html" class="nav-link">Use Cases</a>
+                    </div>
+                    <!-- Team nav disabled
+                    <div class="nav-item">
+                        <a href="team.html" class="nav-link">Team</a>
+                    </div>
+                    -->
+                    <div class="nav-item">
+                        <a href="index.html#about" class="nav-link">About</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">&#9776;</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="curriculums-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Training</span>
+            </div>
+            <h1 class="page-title">Palantir Foundry Training</h1>
+            <p class="page-subtitle">Master Palantir Foundry through our structured 7-day training journey with 23 linked courses, plus role-based certification paths for every skill level.</p>
+        </div>
+    </section>
+
+    <!-- 7-Day Training Journey Timeline -->
+    <section id="seven-day" class="training-journey">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 0.5rem;">7-Day Training Journey</h2>
+            <p class="section-subtitle" style="margin-bottom: 0;">23 Palantir courses across 7 intensive days</p>
+            <div class="journey-timeline">
+                <div class="journey-day active" data-day="1">
+                    <div class="day-circle">1</div>
+                    <div class="day-label">Day 1</div>
+                    <div class="day-topic">Foundations</div>
+                    <div class="day-count">3 courses</div>
+                </div>
+                <div class="journey-day" data-day="2">
+                    <div class="day-circle">2</div>
+                    <div class="day-label">Day 2</div>
+                    <div class="day-topic">Developer Basics</div>
+                    <div class="day-count">3 courses</div>
+                </div>
+                <div class="journey-day" data-day="3">
+                    <div class="day-circle">3</div>
+                    <div class="day-label">Day 3</div>
+                    <div class="day-topic">Data Engineering</div>
+                    <div class="day-count">3 courses</div>
+                </div>
+                <div class="journey-day" data-day="4">
+                    <div class="day-circle">4</div>
+                    <div class="day-label">Day 4</div>
+                    <div class="day-topic">Analytics + DS</div>
+                    <div class="day-count">3 courses</div>
+                </div>
+                <div class="journey-day" data-day="5">
+                    <div class="day-circle">5</div>
+                    <div class="day-label">Day 5</div>
+                    <div class="day-topic">Ontology + AIP</div>
+                    <div class="day-count">3 courses</div>
+                </div>
+                <div class="journey-day" data-day="6">
+                    <div class="day-circle">6</div>
+                    <div class="day-label">Day 6</div>
+                    <div class="day-topic">Advanced + Quiz</div>
+                    <div class="day-count">3 courses</div>
+                </div>
+                <div class="journey-day" data-day="7">
+                    <div class="day-circle">7</div>
+                    <div class="day-label">Day 7</div>
+                    <div class="day-topic">Final Project</div>
+                    <div class="day-count">1 project</div>
+                </div>
+            </div>
+
+            <!-- Overall Progress Bar -->
+            <div class="overall-progress">
+                <div class="overall-progress-header">
+                    <span class="overall-progress-label">&#127891; 7-Day Training Progress</span>
+                    <span class="overall-progress-count" id="overall-count">0 of 19 courses complete</span>
+                </div>
+                <div class="overall-progress-track">
+                    <div class="overall-progress-fill" id="overall-fill" style="width:0%"></div>
+                </div>
+                <div class="overall-progress-footer">
+                    <span id="overall-pct">0% complete</span>
+                    <button class="btn-reset-progress" id="btn-reset">Reset Progress</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7-Day Course Listing -->
+    <section class="curriculums-listing">
+        <div class="container">
+
+            <!-- DAY 1 -->
+            <div class="day-section" id="day-1">
+                <div class="day-header">
+                    <span class="day-badge">DAY 1</span>
+                    <h2>Foundations</h2>
+                    <span class="day-desc">Scoping use cases, platform intro, first workflow</span>
+                    <div class="day-progress-pill" id="day-1-progress"><span class="day-progress-done">0</span> / 3</div>
+                </div>
+                <div class="course-grid">
+                    <div class="course-card" data-course-id="1">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-deep-dive">Deep Dive</span>
+                            <span class="course-number">#1 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Scoping Use Cases for Foundry &amp; AIP</h3>
+                            <ul class="course-topics">
+                                <li>Think in terms of enterprise problems and data solutions</li>
+                                <li>Map current processes and identify gaps</li>
+                                <li>Convert real-world scenarios into Foundry use cases</li>
+                                <li>Understand stakeholders, data sources, pain points</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="2">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-deep-dive">Deep Dive</span>
+                            <span class="course-number">#2 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Introduction to Foundry &amp; AIP for Enterprise Organizations</h3>
+                            <ul class="course-topics">
+                                <li>What Foundry solves: data integration, governance, operational AI</li>
+                                <li>Connection between Foundry and business operations</li>
+                                <li>Real-world examples from aviation, manufacturing, finance</li>
+                                <li>Introduction to AIP and how it enhances workflows</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="3">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-speedrun">Speedrun</span>
+                            <span class="course-number">#3 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Speedrun: Your First End-to-End Workflow</h3>
+                            <ul class="course-topics">
+                                <li>Import raw dataset, clean, transform, build pipeline</li>
+                                <li>Understand pipeline steps, schema, validations, scheduling</li>
+                                <li>Publish outputs to other layers</li>
+                                <li>Check logs, troubleshoot, and fix broken steps</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 2 -->
+            <div class="day-section" id="day-2">
+                <div class="day-header">
+                    <span class="day-badge">DAY 2</span>
+                    <h2>Developer Basics</h2>
+                    <span class="day-desc">Data connections, first application, process mining</span>
+                    <div class="day-progress-pill" id="day-2-progress"><span class="day-progress-done">0</span> / 3</div>
+                </div>
+                <div class="course-grid">
+                    <div class="course-card" data-course-id="4">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-deep-dive">Deep Dive</span>
+                            <span class="course-number">#4 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Deep Dive: Creating Your First Data Connection</h3>
+                            <ul class="course-topics">
+                                <li>Connect databases, cloud storage, APIs</li>
+                                <li>Authentication and secure credential management</li>
+                                <li>Configure sync schedules and data quality checks</li>
+                                <li>Monitor ingestion performance and failure triggers</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="5">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-deep-dive">Deep Dive</span>
+                            <span class="course-number">#5 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Deep Dive: Building Your First Application</h3>
+                            <ul class="course-topics">
+                                <li>Build a Workshop application</li>
+                                <li>Add buttons, inputs, lists, detail views</li>
+                                <li>Connect the app to ontology objects</li>
+                                <li>Build UI workflows for business operations</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="6">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-speedrun">Speedrun</span>
+                            <span class="course-number">#6 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Speedrun: Mining Your First Business Process</h3>
+                            <ul class="course-topics">
+                                <li>Use Machinery to visualize process timelines</li>
+                                <li>Identify bottlenecks, inefficiencies, cycle times</li>
+                                <li>Learn process mining concepts inside Foundry</li>
+                                <li>Build insights using real process event logs</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 3 -->
+            <div class="day-section" id="day-3">
+                <div class="day-header">
+                    <span class="day-badge">DAY 3</span>
+                    <h2>Data Engineering</h2>
+                    <span class="day-desc">Pipelines, code repositories, data protection</span>
+                    <div class="day-progress-pill" id="day-3-progress"><span class="day-progress-done">0</span> / 3</div>
+                </div>
+                <div class="course-grid">
+                    <div class="course-card" data-course-id="7">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-deep-dive">Deep Dive</span>
+                            <span class="course-number">#7 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Deep Dive: Building Your First Pipeline</h3>
+                            <ul class="course-topics">
+                                <li>Detailed pipeline structure, transforms, dependencies</li>
+                                <li>Schema enforcement, type conversion, data validation</li>
+                                <li>Scheduling, auto-refresh, event triggers</li>
+                                <li>Troubleshooting and fixing failing steps</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="8">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-deep-dive">Deep Dive</span>
+                            <span class="course-number">#8 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Deep Dive: Transforming Data with Code Repositories</h3>
+                            <ul class="course-topics">
+                                <li>Introduction to reusable code modules</li>
+                                <li>Version control: commits, branches, approvals</li>
+                                <li>Creating shared logic for multiple pipelines</li>
+                                <li>Structure of enterprise-level codebases</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="9">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-deep-dive">Deep Dive</span>
+                            <span class="course-number">#9 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Deep Dive: Data Protection Tools in Foundry</h3>
+                            <ul class="course-topics">
+                                <li>Markings, access levels, row-level security</li>
+                                <li>Purpose-based access controls</li>
+                                <li>Data lineage and approvals</li>
+                                <li>Compliance and audit-readiness</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 4 -->
+            <div class="day-section" id="day-4">
+                <div class="day-header">
+                    <span class="day-badge">DAY 4</span>
+                    <h2>Analytics + Data Science</h2>
+                    <span class="day-desc">Contour, Quiver, data science fundamentals</span>
+                    <div class="day-progress-pill" id="day-4-progress"><span class="day-progress-done">0</span> / 3</div>
+                </div>
+                <div class="course-grid">
+                    <div class="course-card" data-course-id="10">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-deep-dive">Deep Dive</span>
+                            <span class="course-number">#10 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Deep Dive: Data Analysis in Contour</h3>
+                            <ul class="course-topics">
+                                <li>Build dashboards and charts</li>
+                                <li>Apply filters, drilldowns, summaries</li>
+                                <li>Create KPI panels and reports</li>
+                                <li>Enable business users with no-code analytics</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="11">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-deep-dive">Deep Dive</span>
+                            <span class="course-number">#11 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Deep Dive: Data Analysis in Quiver</h3>
+                            <ul class="course-topics">
+                                <li>Analyze data directly through ontology</li>
+                                <li>Create object-level insights</li>
+                                <li>Build relational summaries and hierarchical analytics</li>
+                                <li>Explore data with real-world semantics</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="12">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-speedrun">Speedrun</span>
+                            <span class="course-number">#12 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Speedrun: Data Science Fundamentals</h3>
+                            <ul class="course-topics">
+                                <li>Introduction to Code Workbook and Notebook</li>
+                                <li>Feature engineering and dataset preparation</li>
+                                <li>Running models, comparing experiments</li>
+                                <li>Understanding how DS fits into Foundry pipelines</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 5 -->
+            <div class="day-section" id="day-5">
+                <div class="day-header">
+                    <span class="day-badge">DAY 5</span>
+                    <h2>Ontology + AIP Workflows</h2>
+                    <span class="day-desc">Ontology functions, design, AIP workflows</span>
+                    <div class="day-progress-pill" id="day-5-progress"><span class="day-progress-done">0</span> / 3</div>
+                </div>
+                <div class="course-grid">
+                    <div class="course-card" data-course-id="13">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-speedrun">Speedrun</span>
+                            <span class="course-number">#13 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Speedrun: Your First Ontology Function</h3>
+                            <ul class="course-topics">
+                                <li>Write a Python function connected to ontology objects</li>
+                                <li>Read object attributes and update values programmatically</li>
+                                <li>Learn business logic scripting through object interaction</li>
+                                <li>Introduces server-side logic in Foundry</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="14">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-deep-dive">Deep Dive</span>
+                            <span class="course-number">#14 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Deep Dive: Creating Your First Ontology</h3>
+                            <ul class="course-topics">
+                                <li>Learn object design, properties, schemas, relationships</li>
+                                <li>Build ontology reflecting real business entities</li>
+                                <li>Create actions and understand how apps use ontology</li>
+                                <li>How ontology dictates front-end behavior</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="15">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-speedrun">Speedrun</span>
+                            <span class="course-number">#15 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Speedrun: Your First AIP Workflow</h3>
+                            <ul class="course-topics">
+                                <li>Introduction to AIP tasks and data connections</li>
+                                <li>Creating automated steps with AI decisions</li>
+                                <li>Understanding prompts, model selection, logic blocks</li>
+                                <li>Deploying a small AIP-powered workflow</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 6 -->
+            <div class="day-section" id="day-6">
+                <div class="day-header">
+                    <span class="day-badge">DAY 6</span>
+                    <h2>Advanced Analytics &amp; AIP</h2>
+                    <span class="day-desc">Foundations quiz, governance, agentic workflows</span>
+                    <div class="day-progress-pill" id="day-6-progress"><span class="day-progress-done">0</span> / 3</div>
+                </div>
+                <div class="course-grid">
+                    <div class="course-card" data-course-id="16">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-quiz">Quiz</span>
+                            <span class="course-number">#16 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Foundry &amp; AIP Builder Foundations Quiz</h3>
+                            <ul class="course-topics">
+                                <li>Tests understanding of all modules</li>
+                                <li>Covers pipelines, ontology, governance, apps, AIP</li>
+                                <li>Data engineering assessment</li>
+                                <li>Ensures readiness for real-world development</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Take Quiz &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="17">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-deep-dive">Deep Dive</span>
+                            <span class="course-number">#17 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Deep Dive: Data Governance Best Practices &mdash; Security Primitives</h3>
+                            <ul class="course-topics">
+                                <li>Secure apps, pipelines, datasets</li>
+                                <li>Role-based, object-based, purpose-based access</li>
+                                <li>Avoid common governance mistakes</li>
+                                <li>Enterprise security patterns</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-course-id="18">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-speedrun">Speedrun</span>
+                            <span class="course-number">#18 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Speedrun: Your First Agentic AIP Workflow</h3>
+                            <ul class="course-topics">
+                                <li>Build an AIP agent that takes decisions automatically</li>
+                                <li>Use ontology objects as inputs and outputs</li>
+                                <li>Create multi-step logical flows using AI</li>
+                                <li>Autonomous agents in enterprise contexts</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Course &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DAY 7 -->
+            <div class="day-section" id="day-7">
+                <div class="day-header">
+                    <span class="day-badge">DAY 7</span>
+                    <h2>Final Day &mdash; Applied Project</h2>
+                    <span class="day-desc">End-to-end Foundry solution capstone</span>
+                    <div class="day-progress-pill" id="day-7-progress"><span class="day-progress-done">0</span> / 1</div>
+                </div>
+                <div class="course-grid">
+                    <div class="course-card" data-course-id="19">
+                        <div class="course-card-header">
+                            <span class="course-type-badge badge-notional">Notional Project</span>
+                            <span class="course-number">#19 of 19</span>
+                        </div>
+                        <div class="course-card-body">
+                            <h3>Applied Notional Project</h3>
+                            <ul class="course-topics">
+                                <li>Real scenario: HR dashboard, supply chain workflow, or sales monitoring</li>
+                                <li>Build ontology, ingest data, pipeline, AIP step, application</li>
+                                <li>Deliver a full working mini-solution</li>
+                                <li>Showcases end-to-end Foundry ability</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-footer">
+                            <button class="btn-mark-complete">Mark Complete</button>
+                            <a href="https://aavya.palantirfoundry.com/workspace/carbon/ri.carbon.main.workspace.68032360-0303-4164-a507-81a542dc7f3c/home" target="_blank" class="course-link">Start Project &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Training</h4>
+                    <ul>
+                        <li><a href="curriculums.html">Curriculums</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Consultancy</a></li>
+                        <li><a href="index.html#services">Staff Augmentation</a></li>
+                        <li><a href="index.html#industries">Industries</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                        <!-- <li><a href="team.html">Team</a></li> -->
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aavya. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="mailto:contact@aavya.com">contact@aavya.com</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/curriculums.js"></script>
+</body>
+</html>

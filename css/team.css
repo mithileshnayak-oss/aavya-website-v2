@@ -1,0 +1,375 @@
+/* Team Page Styles */
+
+/* Practice Highlights */
+.practice-highlights {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.highlight-item {
+    text-align: center;
+}
+
+.highlight-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    line-height: 1;
+}
+
+.highlight-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+/* Capabilities Section */
+.capabilities {
+    padding: 4rem 0;
+    background: var(--bg-card);
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.capability-item {
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s;
+}
+
+.capability-item:hover {
+    border-color: var(--primary-blue);
+    transform: translateX(5px);
+}
+
+.capability-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.capability-item h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.capability-item p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Skill Matrix Section */
+.skill-matrix-section {
+    padding: 4rem 0;
+}
+
+.matrix-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.matrix-controls label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.matrix-controls select {
+    padding: 0.5rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.matrix-controls select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+/* Skill Matrix Table */
+.matrix-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.skill-matrix {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.skill-matrix thead {
+    background: var(--bg-card);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.skill-matrix th {
+    padding: 1rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--primary-blue);
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s;
+}
+
+.skill-matrix th:hover {
+    color: var(--primary-blue);
+}
+
+.skill-matrix th .sort-arrow {
+    font-size: 0.7rem;
+    margin-left: 0.3rem;
+    color: var(--text-secondary);
+}
+
+.skill-matrix th.sorted .sort-arrow {
+    color: var(--primary-blue);
+}
+
+.skill-matrix td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.2s;
+}
+
+.skill-matrix tbody tr {
+    transition: background 0.2s;
+}
+
+.skill-matrix tbody tr:hover {
+    background: rgba(58, 173, 221, 0.05);
+}
+
+.skill-matrix tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.skill-matrix tbody tr:nth-child(even):hover {
+    background: rgba(58, 173, 221, 0.05);
+}
+
+/* Team member name column */
+.member-name {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.member-exp {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+/* Rating cells */
+.rating-cell {
+    text-align: center;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.rating-5 {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+.rating-4 {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+}
+
+.rating-3 {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+}
+
+.rating-low {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+}
+
+/* Overall rating highlight */
+.overall-cell {
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+/* Certified badge */
+.cert-badge {
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Rating Legend */
+.matrix-legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.legend-green { background: rgba(16, 185, 129, 0.3); }
+.legend-blue { background: rgba(59, 130, 246, 0.3); }
+.legend-yellow { background: rgba(245, 158, 11, 0.3); }
+.legend-orange { background: rgba(239, 68, 68, 0.2); }
+
+/* Key Solutions */
+.solutions-section {
+    padding: 4rem 0;
+    background: var(--bg-card);
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.solution-card {
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.solution-card:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-3px);
+}
+
+.solution-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.solution-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.solution-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Target Industries */
+.target-industries {
+    padding: 4rem 0;
+}
+
+.target-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.target-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.target-card:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-3px);
+}
+
+.target-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.target-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Value Proposition Banner */
+.value-banner {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(58, 173, 221, 0.1), rgba(167, 139, 250, 0.05));
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.value-banner blockquote {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 1rem auto 0;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .practice-highlights {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .matrix-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .target-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

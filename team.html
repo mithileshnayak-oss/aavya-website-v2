@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Aavya | Palantir Practice Specialists</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/team.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html"><img src="logo-aavya.png" alt="Aavya" class="logo-img"></a>
+                </div>
+                <div class="nav-links">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link">Training <span class="dropdown-arrow">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="curriculums.html" class="dropdown-item">
+                                <strong>Curriculums</strong>
+                                <span class="dropdown-desc">Role-based certification paths</span>
+                            </a>
+                            <a href="certifications.html" class="dropdown-item">
+                                <strong>Certifications</strong>
+                                <span class="dropdown-desc">Professional credentials</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link">Services <span class="dropdown-arrow">&#9660;</span></a>
+                        <div class="dropdown-content">
+                            <a href="index.html#services" class="dropdown-item">
+                                <strong>Consultancy</strong>
+                                <span class="dropdown-desc">Strategic guidance and implementation</span>
+                            </a>
+                            <a href="index.html#services" class="dropdown-item">
+                                <strong>Staff Augmentation</strong>
+                                <span class="dropdown-desc">Expert talent solutions</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="use-cases.html" class="nav-link">Use Cases</a>
+                    </div>
+                    <!-- Team nav disabled
+                    <div class="nav-item">
+                        <a href="team.html" class="nav-link">Team</a>
+                    </div>
+                    -->
+                    <div class="nav-item">
+                        <a href="index.html#about" class="nav-link">About</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">&#9776;</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- TEAM PAGE CONTENT DISABLED
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Team</span>
+            </div>
+            <h1 class="page-title">Palantir Practice</h1>
+            <p class="page-subtitle">Foundry expertise transforming data into operational excellence</p>
+            <div class="practice-highlights">
+                <div class="highlight-item">
+                    <div class="highlight-number">16</div>
+                    <div class="highlight-label">Palantir Specialists</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-number">10+</div>
+                    <div class="highlight-label">Implementations</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-number">3</div>
+                    <div class="highlight-label">Industry Verticals</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Capabilities -->
+    <section class="capabilities">
+        <div class="container">
+            <h2 class="section-title">Core Capabilities</h2>
+            <div class="capabilities-grid">
+                <div class="capability-item">
+                    <div class="capability-icon">&#9881;&#65039;</div>
+                    <div>
+                        <h3>Foundry Implementation &amp; Configuration</h3>
+                        <p>End-to-end platform setup and customization</p>
+                    </div>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">&#129302;</div>
+                    <div>
+                        <h3>AIP (AI Platform) Integration</h3>
+                        <p>AI-powered workflows and intelligent automation</p>
+                    </div>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">&#128300;</div>
+                    <div>
+                        <h3>Ontology Design &amp; Data Modeling</h3>
+                        <p>Enterprise data structures and relationships</p>
+                    </div>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">&#128187;</div>
+                    <div>
+                        <h3>Custom Application Development</h3>
+                        <p>Workshop applications and TypeScript widgets</p>
+                    </div>
+                </div>
+                <div class="capability-item">
+                    <div class="capability-icon">&#128736;&#65039;</div>
+                    <div>
+                        <h3>Managed Services &amp; Support</h3>
+                        <p>24/7 monitoring, health checks, and optimization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Banner -->
+    <section class="value-banner">
+        <div class="container">
+            <h2 class="section-title">Palantir Value Proposition</h2>
+            <blockquote>Transform fragmented data into unified operational intelligence. Our Foundry expertise enables real-time decision-making, predictive insights, and automated workflows &mdash; delivering 40-60% efficiency improvements across enterprise operations.</blockquote>
+        </div>
+    </section>
+
+    <!-- Skill Matrix -->
+    <section class="skill-matrix-section">
+        <div class="container">
+            <h2 class="section-title">Candidate Skill Matrix</h2>
+            <p class="section-subtitle">Comprehensive ratings across all Foundry competencies (scale: 1-5)</p>
+
+            <div class="matrix-controls">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select">
+                    <option value="overall-desc">Overall Rating (High to Low)</option>
+                    <option value="overall-asc">Overall Rating (Low to High)</option>
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="exp-desc">Experience (High to Low)</option>
+                    <option value="ontology-desc">Ontology</option>
+                    <option value="workshop-desc">Workshop</option>
+                    <option value="pipeline-desc">Pipeline</option>
+                    <option value="coderepos-desc">Code Repos</option>
+                    <option value="typescript-desc">TypeScript</option>
+                    <option value="aip-desc">AIP/LLM</option>
+                    <option value="dataInteg-desc">Data Integration</option>
+                </select>
+            </div>
+
+            <div class="matrix-wrapper">
+                <table class="skill-matrix" id="skill-matrix">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Exp (Yrs)</th>
+                            <th>Certified</th>
+                            <th>Ontology</th>
+                            <th>Workshop</th>
+                            <th>Pipeline</th>
+                            <th>Code Repos</th>
+                            <th>TypeScript</th>
+                            <th>AIP/LLM</th>
+                            <th>Data Integ</th>
+                            <th>Overall</th>
+                        </tr>
+                    </thead>
+                    <tbody id="matrix-body">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="matrix-legend">
+                <div class="legend-item"><div class="legend-color legend-green"></div> 5.0 - Expert</div>
+                <div class="legend-item"><div class="legend-color legend-blue"></div> 4.0-4.9 - Advanced</div>
+                <div class="legend-item"><div class="legend-color legend-yellow"></div> 3.0-3.9 - Intermediate</div>
+                <div class="legend-item"><div class="legend-color legend-orange"></div> &lt; 3.0 - Developing</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Solutions -->
+    <section class="solutions-section">
+        <div class="container">
+            <h2 class="section-title">Key Solutions</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">&#128202;</div>
+                    <h3>Operational Analytics Platform</h3>
+                    <p>Real-time operational dashboards and KPI tracking</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">&#128666;</div>
+                    <h3>Supply Chain Control Tower</h3>
+                    <p>End-to-end supply chain visibility and optimization</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">&#128295;</div>
+                    <h3>Predictive Maintenance Hub</h3>
+                    <p>AI-powered predictive maintenance and asset management</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">&#128220;</div>
+                    <h3>Regulatory Compliance Engine</h3>
+                    <p>Automated compliance tracking and reporting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Industries -->
+    <section class="target-industries">
+        <div class="container">
+            <h2 class="section-title">Target Industries</h2>
+            <div class="target-grid">
+                <div class="target-card">
+                    <div class="target-icon">&#128176;</div>
+                    <h3>Financial Services</h3>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">&#127981;</div>
+                    <h3>Manufacturing</h3>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">&#128225;</div>
+                    <h3>Telecom</h3>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">&#127973;</div>
+                    <h3>Healthcare</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    TEAM PAGE CONTENT DISABLED -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Training</h4>
+                    <ul>
+                        <li><a href="curriculums.html">Curriculums</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Consultancy</a></li>
+                        <li><a href="index.html#services">Staff Augmentation</a></li>
+                        <li><a href="index.html#industries">Industries</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                        <!-- <li><a href="team.html">Team</a></li> -->
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aavya. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="mailto:contact@aavya.com">contact@aavya.com</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/team.js"></script>
+</body>
+</html>

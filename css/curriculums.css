@@ -1,0 +1,708 @@
+/* Curriculums Page Specific Styles */
+
+/* Hero Section */
+.curriculums-hero {
+    background: linear-gradient(135deg, #e8f8fd 0%, #d6f0f9 50%, #b8e4f5 100%);
+    padding: 8rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.curriculums-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 50%, rgba(58, 173, 221, 0.1) 0%, transparent 50%);
+}
+
+/* 7-Day Training Journey Timeline */
+.training-journey {
+    padding: 4rem 0;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.journey-timeline {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.journey-timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-violet));
+    transform: translateY(-50%);
+}
+
+.journey-day {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    position: relative;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.journey-day:hover .day-circle {
+    transform: scale(1.15);
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
+}
+
+.day-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid var(--primary-blue);
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 0 auto 0.75rem;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.journey-day.active .day-circle {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    color: white;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+.day-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.day-topic {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.3;
+}
+
+.day-count {
+    font-size: 0.7rem;
+    color: var(--primary-blue);
+    margin-top: 0.25rem;
+    font-weight: 600;
+}
+
+/* Filters Section */
+.filters-section {
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+}
+
+.filters-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-icon {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.filter-label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-blue);
+    color: var(--text-primary);
+    background: rgba(58, 173, 221, 0.1);
+}
+
+.filter-btn.active {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: white;
+}
+
+/* Results Section */
+.results-section {
+    padding: 2rem 0 1rem;
+}
+
+.results-count {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+#results-count {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+/* 7-Day Sections */
+.day-section {
+    margin-bottom: 3rem;
+}
+
+.day-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.day-badge {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 800;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.day-header h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.day-header .day-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-left: auto;
+}
+
+/* Course Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Course Card */
+.course-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(58, 173, 221, 0.2);
+    border-color: var(--primary-blue);
+}
+
+.course-card-header {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.course-type-badge {
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.badge-deep-dive {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.badge-speedrun {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.badge-quiz {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.badge-notional {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.course-number {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.course-card-body {
+    padding: 1.25rem 1.5rem;
+    flex: 1;
+}
+
+.course-card-body h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.course-topics {
+    list-style: none;
+    padding: 0;
+}
+
+.course-topics li {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    padding: 0.2rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.course-topics li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary-blue);
+}
+
+.course-card-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.course-link {
+    background: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.course-link:hover {
+    background: var(--primary-blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+}
+
+/* Existing Curriculums Section */
+.curriculums-listing {
+    padding: 2rem 0 4rem;
+}
+
+.curriculum-section {
+    margin-bottom: 4rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.section-icon {
+    font-size: 1.8rem;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.section-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-left: auto;
+}
+
+/* Curriculum Grid */
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 2rem;
+}
+
+/* Curriculum Card */
+.curriculum-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.curriculum-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(58, 173, 221, 0.2);
+    border-color: var(--primary-blue);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.awareness-badge { background: linear-gradient(135deg, #4a5568, #2d3748) !important; }
+.fundamentals-badge { background: linear-gradient(135deg, #2563eb, #1e40af) !important; }
+.associate-badge { background: linear-gradient(135deg, #7c3aed, #5b21b6) !important; }
+.professional-badge { background: linear-gradient(135deg, #db2777, #be185d) !important; }
+.expert-badge { background: linear-gradient(135deg, #dc2626, #991b1b) !important; }
+
+.card-icon { font-size: 1.5rem; }
+
+.card-badge {
+    background: var(--primary-blue);
+    color: white;
+    padding: 0.375rem 0.875rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.card-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin: 1.5rem 1.5rem 1rem;
+    color: var(--text-primary);
+}
+
+.card-description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0 1.5rem 1.5rem;
+    flex: 1;
+}
+
+.card-meta {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.meta-item {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.card-duration {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.btn-quote {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-quote:hover {
+    background: var(--primary-blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+}
+
+.btn-link {
+    background: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-link:hover {
+    background: var(--primary-blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+}
+
+/* Hidden class for filtering */
+.curriculum-card.hidden { display: none; }
+.curriculum-section.hidden { display: none; }
+
+/* Responsive */
+@media (max-width: 968px) {
+    .curriculum-grid { grid-template-columns: 1fr; }
+    .course-grid { grid-template-columns: 1fr; }
+    .section-header { flex-wrap: wrap; }
+    .section-desc { margin-left: 0; width: 100%; }
+    .day-header { flex-wrap: wrap; }
+    .day-header .day-desc { margin-left: 0; width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .curriculums-hero { padding: 6rem 0 3rem; }
+    .filters-section { position: relative; top: 0; }
+    .filters-container { flex-direction: column; align-items: flex-start; }
+    .filter-buttons { width: 100%; }
+    .page-title { font-size: 2rem; }
+    .card-title { font-size: 1.25rem; }
+    .journey-timeline { overflow-x: auto; padding-bottom: 1rem; }
+    .journey-day { min-width: 120px; }
+}
+
+@media (max-width: 480px) {
+    .card-footer { flex-direction: column; gap: 1rem; align-items: stretch; }
+    .btn-quote { width: 100%; justify-content: center; }
+    .filter-btn { flex: 1 1 auto; min-width: calc(50% - 0.25rem); }
+}
+
+/* ─── Progress Tracking ──────────────────────────────────── */
+
+/* Overall progress bar */
+.overall-progress {
+    margin-top: 2rem;
+    background: #ffffff;
+    border: 2px solid var(--primary-blue);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 4px 16px rgba(58, 173, 221, 0.1);
+}
+
+.overall-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.875rem;
+}
+
+.overall-progress-label {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.overall-progress-count {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.overall-progress-track {
+    height: 14px;
+    background: #e9e3ff;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.overall-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-violet));
+    border-radius: 7px;
+    transition: width 0.5s ease;
+    min-width: 0%;
+}
+
+.overall-progress-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.75rem;
+}
+
+#overall-pct {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.btn-reset-progress {
+    background: none;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-sm);
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-reset-progress:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.05);
+}
+
+/* Day progress pill appended to .day-header */
+.day-progress-pill {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 0.3rem 0.875rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.day-progress-pill.day-complete {
+    background: rgba(16, 185, 129, 0.12);
+    border-color: #10b981;
+    color: #059669;
+}
+
+/* Course card completed state */
+.course-card.card-completed {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+.course-card.card-completed .course-card-header {
+    background: rgba(16, 185, 129, 0.06);
+    border-bottom-color: rgba(16, 185, 129, 0.2);
+}
+
+/* Course card footer — allow space-between for button + link */
+.course-card-footer {
+    justify-content: space-between !important;
+    align-items: center;
+}
+
+/* Mark Complete button */
+.btn-mark-complete {
+    background: #f0fdf4;
+    border: 2px solid #10b981;
+    border-radius: var(--radius-md);
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #059669;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: inherit;
+}
+
+.btn-mark-complete:hover {
+    background: #059669;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-mark-complete.is-complete {
+    background: #059669;
+    border-color: #059669;
+    color: #ffffff;
+}
+
+/* Journey timeline circle — completed day */
+.journey-day.day-done .day-circle {
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-color: #10b981;
+    color: white;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.journey-day.day-done .day-count {
+    color: #059669;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .day-progress-pill {
+        margin-left: 0;
+        order: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .overall-progress { padding: 1.25rem; }
+    .day-progress-pill { font-size: 0.8rem; padding: 0.25rem 0.625rem; }
+    .btn-mark-complete { font-size: 0.8rem; padding: 0.5rem 0.75rem; }
+}

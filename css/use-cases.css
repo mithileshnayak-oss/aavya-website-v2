@@ -1,0 +1,329 @@
+/* Use Cases Page Styles */
+
+.use-cases-content {
+    padding: 4rem 0;
+}
+
+/* Use Case Section */
+.use-case {
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.use-case:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.use-case-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.use-case-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.use-case-header-text h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+}
+
+.use-case-header-text .uc-subtitle {
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.use-case-header-text .uc-tagline {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* Metrics Row */
+.use-case-metrics {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.uc-metric {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
+    transition: all 0.3s;
+}
+
+.uc-metric:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-3px);
+}
+
+.uc-metric-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.uc-metric-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Challenge / Solution / Value Grid */
+.uc-details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.uc-detail-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+}
+
+.uc-detail-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.uc-detail-card h3 .uc-icon {
+    font-size: 1.3rem;
+}
+
+.uc-detail-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.uc-detail-card ul li {
+    color: var(--text-secondary);
+    padding: 0.4rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.uc-detail-card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary-blue);
+}
+
+/* Challenge card */
+.uc-challenge { border-left: 3px solid #ef4444; }
+.uc-challenge h3 { color: #ef4444; }
+
+/* Solution card */
+.uc-solution { border-left: 3px solid var(--primary-blue); }
+.uc-solution h3 { color: var(--primary-blue); }
+
+/* Value card */
+.uc-value { border-left: 3px solid #10b981; }
+.uc-value h3 { color: #10b981; }
+
+/* Before / After Section */
+.uc-transformation {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.uc-transform-title {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.uc-transform-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
+}
+
+.uc-before, .uc-after {
+    padding: 1.5rem;
+}
+
+.uc-before h4, .uc-after h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.uc-before h4 { color: #ef4444; }
+.uc-after h4 { color: #10b981; }
+
+.uc-before ul, .uc-after ul {
+    list-style: none;
+    padding: 0;
+}
+
+.uc-before ul li, .uc-after ul li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.uc-before ul li strong, .uc-after ul li strong {
+    color: var(--text-primary);
+    display: block;
+    font-size: 0.95rem;
+}
+
+.uc-arrow-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-dark);
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+/* Flow Steps (for Use Case 2) */
+.uc-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.uc-flow-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.uc-flow-step::after {
+    content: '>';
+    position: absolute;
+    right: -0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.uc-flow-step:last-child::after {
+    display: none;
+}
+
+.flow-step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 0 auto 0.75rem;
+}
+
+.uc-flow-step h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.uc-flow-step p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .uc-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .uc-transform-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .uc-arrow-divider {
+        padding: 0.75rem;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .uc-flow {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .uc-flow-step::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .use-case-header {
+        flex-direction: column;
+    }
+
+    .use-case-metrics {
+        flex-direction: column;
+    }
+
+    .uc-metric {
+        min-width: 100%;
+    }
+
+    .uc-flow {
+        grid-template-columns: 1fr;
+    }
+}
